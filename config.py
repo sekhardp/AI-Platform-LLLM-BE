@@ -23,10 +23,10 @@ class Settings(BaseSettings):
     api_host: str = "0.0.0.0"
     api_port: int = 80
 
-    allowed_origins: list[str] = [
-        "http://localhost:5173",
-        "http://localhost:3000",
-    ]
+    # allowed_origins: list[str] = [
+    #     "http://localhost:5173",
+    #     "http://localhost:3000",
+    # ]
     """Comma-separated CORS allowed origins (or a JSON list in the env var)."""
 
     log_level: str = "info"

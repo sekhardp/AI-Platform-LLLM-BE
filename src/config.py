@@ -24,9 +24,7 @@ class Settings(BaseSettings):
     api_port: int = 8001
 
     allowed_origins: list[str] = [
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "https://ai-platform-lllm-ui-24286129227.us-central1.run.app"
+       "*"
     ]
     """Comma-separated CORS allowed origins (or a JSON list in the env var)."""
 

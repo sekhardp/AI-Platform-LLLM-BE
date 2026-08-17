@@ -23,9 +23,13 @@ class Settings(BaseSettings):
     api_host: str = "0.0.0.0"
     api_port: int = 8001
 
-    allowed_origins: list[str] = [
-       "https://ai-platform-lllm-ui-24286129227.us-central1.run.app"
-    ]
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=settings.allowed_origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
     """Comma-separated CORS allowed origins (or a JSON list in the env var)."""
 
     log_level: str = "info"

@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     api_port: int = 8001
 
     allowed_origins: list[str] = [
-       "*"
+       "*.us-central1.run.app"
     ]
     """Comma-separated CORS allowed origins (or a JSON list in the env var)."""
 
